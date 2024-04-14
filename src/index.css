@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100dvh;
+}
+
+#root {
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-homepage {
+  background-image: url('/home/background-home-mobile.jpg');
+}
+
+.background-destination {
+  background-image: url('/destination/background-destination-mobile.jpg');
+}
+
+.background-crew {
+  background-image: url('/crew/background-crew-mobile.jpg');
+}
+
+.background-technology {
+  background-image: url('/technology/background-technology-mobile.jpg');
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #fff;
+  transform: scaleY(0);
+  transition: transform 250ms ease;
+}
+
+.nav-link.active::after {
+  transform: scaleY(1);
+}
+
+.lg-nav-link {
+  position: relative;
+  transition: color 250ms ease;
+}
+
+.lg-nav-link.active {
+  position: relative;
+  color: #fff;
+}
+
+.lg-nav-link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 250ms ease;
+}
+
+.lg-nav-link:hover::after {
+  background-color: rgb(255 255 255 / 50%);
+}
+
+.lg-nav-link.active::after {
+  background-color: #fff;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    translate: 0 2rem;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    scale: 0.85;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 700ms ease;
+}
+
+.animate-scale-up {
+  animation: scaleUp 350ms ease 500ms;
+  animation-fill-mode: backwards;
+}
+
+/* React Transition Group */
+
+.slideLeft-enter {
+  translate: 100% 0;
+}
+
+.slideLeft-exit {
+  translate: 0 0;
+}
+
+.slideLeft-enter-active {
+  translate: 0 0;
+}
+
+.slideLeft-exit-active {
+  translate: 100% 0;
+}
+
+.slideLeft-enter-active,
+.slideLeft-exit-active {
+  transition: translate 200ms ease-in-out;
+}
+
+/* --- */
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* --- */
+
+.image-enter {
+  opacity: 0;
+  translate: 15px 0;
+}
+
+.image-exit,
+.image-enter-active {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.image-exit-active {
+  opacity: 0;
+  translate: -15px 0;
+}
+
+.image-enter-active,
+.image-exit-active {
+  transition: opacity 300ms, translate 300ms;
+}
+
+@media (min-width: 768px) {
+  .no-scroll {
+    overflow: auto;
+  }
+
+  .background-homepage {
+    background-image: url('/home/background-home-tablet.jpg');
+  }
+
+  .background-destination {
+    background-image: url('/destination/background-destination-tablet.jpg');
+  }
+
+  .background-crew {
+    background-image: url('/crew/background-crew-tablet.jpg');
+  }
+
+  .background-technology {
+    background-image: url('/technology/background-technology-tablet.jpg');
+  }
+}
+
+@media (min-width: 1280px) {
+  .background-homepage {
+    background-image: url('/home/background-home-desktop.jpg');
+  }
+
+  .background-destination {
+    background-image: url('/destination/background-destination-desktop.jpg');
+  }
+
+  .background-crew {
+    background-image: url('/crew/background-crew-desktop.jpg');
+  }
+
+  .background-technology {
+    background-image: url('/technology/background-technology-desktop.jpg');
+  }
+}
