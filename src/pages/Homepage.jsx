@@ -9,12 +9,12 @@ export default function Homepage() {
       <div className="max-w-container mx-auto flex-1 flex flex-col justify-between items-center gap-20 md:gap-32 xl:flex-row xl:items-end">
         <div className="max-w-[450px] flex flex-col gap-4 text-center md:gap-6 xl:text-left animate-slide-up">
           <h1 className="flex flex-col gap-4 md:gap-6">
-            <div className="text-nav leading-nav font-condensed uppercase tracking-nav md:text-xl md:leading-6 md:tracking-[3.38px] xl:text-h5 xl:leading-h5 xl:tracking-h5">
+            <span className="block text-nav leading-nav font-condensed uppercase tracking-nav md:text-xl md:leading-6 md:tracking-[3.38px] xl:text-h5 xl:leading-h5 xl:tracking-h5">
               So, you want to travel to
-            </div>
-            <div className="text-[5rem] leading-[6.25rem] uppercase font-serif text-white md:text-h1 md:leading-none xl:leading-h1">
+            </span>
+            <span className="block text-[5rem] leading-[6.25rem] uppercase font-serif text-white md:text-h1 md:leading-none xl:leading-h1">
               Space
-            </div>
+            </span>
           </h1>
           <p className="max-w-[445px]">
             Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of
