@@ -12,11 +12,11 @@ export default function Technology() {
   const selectedItem = data.technology[selectedIndex]
 
   return (
-    <main className="mb-20 md:mt-10 md:mb-24 xl:mt-[4.75rem] xl:ml-[10.25rem] xl:mb-[6.25rem] 2xl:max-w-7xl 2xl:mx-auto">
+    <main className="mb-20 flex flex-col md:mt-10 md:mb-24 xl:mt-[4.75rem] xl:ml-[10.25rem] xl:mb-[6.25rem] 2xl:max-w-7xl 2xl:mx-auto">
       <header className="md:px-10 xl:px-0">
         <Heading number="03" text="Space Launch 101" />
       </header>
-      <div className="mt-8 flex flex-col items-center md:mt-[3.75rem] xl:mt-[1.625rem] xl:flex-row">
+      <div className="flex-1 mt-8 flex flex-col items-center md:mt-[3.75rem] xl:mt-[1.625rem] xl:flex-row">
         <div className="flex overflow-hidden xl:order-1 xl:max-w-[515px] xl:ml-auto">
           {data.technology.map((technology, index) => (
             <picture
